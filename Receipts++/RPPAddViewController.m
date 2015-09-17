@@ -48,8 +48,9 @@
 
 
 - (IBAction)doneAction:(UIButton *)sender {
-    [self createNewReceipt];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    if ([self createNewReceipt]) {
+	    [self dismissViewControllerAnimated:YES completion:nil];
+	}
 }
 
 
@@ -60,13 +61,19 @@
     
 }
 
-- (void)createNewReceipt {
+- (BOOL)createNewReceipt {
+
+    NSNumber *amount = [NSNumber numberFromString:self.receiptAmountTextField.text];
+    
+    if (amount == nil)
+        return NO;
+    
     RPPReceipt *receipt = [NSEntityDescription
                             insertNewObjectForEntityForName:RECEIPT_ENTITY_NAME
                             inManagedObjectContext:self.context];
     
     receipt.saleDescription = self.receiptNameTextField.text;
-    receipt.amount = [NSNumber numberFromString:self.receiptAmountTextField.text];
+    receipt.amount = amount;
     receipt.timeOfSale = self.receiptDatePicker.date;
     
     NSError *saveError = nil;
@@ -74,6 +81,8 @@
     if (![self.context save:&saveError]) {
         NSLog(@"Save failed! %@", saveError);
     }
+    
+    return YES;
 }
 
 #pragma mark - Fetched Results Controller
@@ -92,7 +101,8 @@
     [fetchRequest setFetchBatchSize:20];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:RECEIPT_ENTITY_NAME ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:RECEIPT_ENTITY_NAME
+                                                                   ascending:NO];
     
     [fetchRequest setSortDescriptors:@[sortDescriptor]];
     
