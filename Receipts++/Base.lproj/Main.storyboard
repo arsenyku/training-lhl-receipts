@@ -58,15 +58,18 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iKQ-4D-Zbs">
                                 <rect key="frame" x="175" y="105" width="250" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="slS-px-FBa">
-                                <rect key="frame" x="175" y="170" width="250" height="216"/>
+                                <rect key="frame" x="175" y="170" width="250" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="yLp-JO-dE4"/>
+                                </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="464214117.20609498">
                                     <!--2015-09-17 20:21:57 +0000-->
                                 </date>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5Z-U4-F2U">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5Z-U4-F2U">
                                 <rect key="frame" x="282" y="421" width="37" height="30"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
@@ -96,6 +99,11 @@
                             <constraint firstItem="iKQ-4D-Zbs" firstAttribute="centerX" secondItem="goI-Fu-f2w" secondAttribute="centerX" id="wCz-Nd-ltn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="receiptAmountTextField" destination="iKQ-4D-Zbs" id="SZX-5S-3VO"/>
+                        <outlet property="receiptDatePicker" destination="slS-px-FBa" id="KS4-zU-NCH"/>
+                        <outlet property="receiptNameTextField" destination="goI-Fu-f2w" id="Wsk-JP-NRg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ob4-pO-Yek" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

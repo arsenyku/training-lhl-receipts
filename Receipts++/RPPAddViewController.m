@@ -9,6 +9,9 @@
 #import "RPPAddViewController.h"
 
 @interface RPPAddViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *receiptNameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *receiptAmountTextField;
+@property (weak, nonatomic) IBOutlet UIDatePicker *receiptDatePicker;
 
 @end
 
@@ -17,6 +20,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
 }
 
 
@@ -24,5 +33,10 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+
+-(void)dismissKeyboard {
+    [self.receiptNameTextField resignFirstResponder];
+    [self.receiptAmountTextField resignFirstResponder];
+}
 
 @end
