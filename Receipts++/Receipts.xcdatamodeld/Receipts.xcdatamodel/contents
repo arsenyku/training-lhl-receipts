@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8195" systemVersion="14F27" minimumToolsVersion="Automatic">
+    <entity name="RPPReceipt" syncable="YES">
+        <attribute name="amount" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="saleDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeOfSale" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RPPTag" inverseName="receipt" inverseEntity="RPPTag" syncable="YES"/>
+    </entity>
+    <entity name="RPPTag" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="receipt" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RPPReceipt" inverseName="tags" inverseEntity="RPPReceipt" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="RPPReceipt" positionX="-290" positionY="-54" width="128" height="103"/>
+        <element name="RPPTag" positionX="-54" positionY="-9" width="128" height="73"/>
+    </elements>
+</model>
