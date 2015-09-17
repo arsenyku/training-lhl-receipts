@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		127E66421BAB2E8400B4C3DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 127E66411BAB2E8400B4C3DD /* main.m */; };
-		127E66451BAB2E8400B4C3DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 127E66441BAB2E8400B4C3DD /* AppDelegate.m */; };
-		127E66481BAB2E8400B4C3DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 127E66471BAB2E8400B4C3DD /* ViewController.m */; };
+		127E66451BAB2E8400B4C3DD /* RPPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 127E66441BAB2E8400B4C3DD /* RPPAppDelegate.m */; };
+		127E66481BAB2E8400B4C3DD /* RPPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 127E66471BAB2E8400B4C3DD /* RPPMainViewController.m */; };
 		127E664B1BAB2E8400B4C3DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 127E66491BAB2E8400B4C3DD /* Main.storyboard */; };
-		127E664E1BAB2E8400B4C3DD /* Receipts__.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 127E664C1BAB2E8400B4C3DD /* Receipts__.xcdatamodeld */; };
+		127E664E1BAB2E8400B4C3DD /* Receipts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 127E664C1BAB2E8400B4C3DD /* Receipts.xcdatamodeld */; };
 		127E66501BAB2E8400B4C3DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 127E664F1BAB2E8400B4C3DD /* Assets.xcassets */; };
 		127E66531BAB2E8400B4C3DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 127E66511BAB2E8400B4C3DD /* LaunchScreen.storyboard */; };
 		127E665E1BAB2E8400B4C3DD /* Receipts__Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 127E665D1BAB2E8400B4C3DD /* Receipts__Tests.m */; };
@@ -38,12 +38,12 @@
 /* Begin PBXFileReference section */
 		127E663D1BAB2E8400B4C3DD /* Receipts++.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Receipts++.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		127E66411BAB2E8400B4C3DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		127E66431BAB2E8400B4C3DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		127E66441BAB2E8400B4C3DD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		127E66461BAB2E8400B4C3DD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		127E66471BAB2E8400B4C3DD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		127E66431BAB2E8400B4C3DD /* RPPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RPPAppDelegate.h; sourceTree = "<group>"; };
+		127E66441BAB2E8400B4C3DD /* RPPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RPPAppDelegate.m; sourceTree = "<group>"; };
+		127E66461BAB2E8400B4C3DD /* RPPMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RPPMainViewController.h; sourceTree = "<group>"; };
+		127E66471BAB2E8400B4C3DD /* RPPMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RPPMainViewController.m; sourceTree = "<group>"; };
 		127E664A1BAB2E8400B4C3DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		127E664D1BAB2E8400B4C3DD /* Receipts__.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Receipts__.xcdatamodel; sourceTree = "<group>"; };
+		127E664D1BAB2E8400B4C3DD /* Receipts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Receipts.xcdatamodel; sourceTree = "<group>"; };
 		127E664F1BAB2E8400B4C3DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		127E66521BAB2E8400B4C3DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		127E66541BAB2E8400B4C3DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,15 +103,15 @@
 		127E663F1BAB2E8400B4C3DD /* Receipts++ */ = {
 			isa = PBXGroup;
 			children = (
-				127E66431BAB2E8400B4C3DD /* AppDelegate.h */,
-				127E66441BAB2E8400B4C3DD /* AppDelegate.m */,
-				127E66461BAB2E8400B4C3DD /* ViewController.h */,
-				127E66471BAB2E8400B4C3DD /* ViewController.m */,
+				127E66431BAB2E8400B4C3DD /* RPPAppDelegate.h */,
+				127E66441BAB2E8400B4C3DD /* RPPAppDelegate.m */,
+				127E66461BAB2E8400B4C3DD /* RPPMainViewController.h */,
+				127E66471BAB2E8400B4C3DD /* RPPMainViewController.m */,
 				127E66491BAB2E8400B4C3DD /* Main.storyboard */,
 				127E664F1BAB2E8400B4C3DD /* Assets.xcassets */,
 				127E66511BAB2E8400B4C3DD /* LaunchScreen.storyboard */,
 				127E66541BAB2E8400B4C3DD /* Info.plist */,
-				127E664C1BAB2E8400B4C3DD /* Receipts__.xcdatamodeld */,
+				127E664C1BAB2E8400B4C3DD /* Receipts.xcdatamodeld */,
 				127E66401BAB2E8400B4C3DD /* Supporting Files */,
 			);
 			path = "Receipts++";
@@ -273,9 +273,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				127E664E1BAB2E8400B4C3DD /* Receipts__.xcdatamodeld in Sources */,
-				127E66481BAB2E8400B4C3DD /* ViewController.m in Sources */,
-				127E66451BAB2E8400B4C3DD /* AppDelegate.m in Sources */,
+				127E664E1BAB2E8400B4C3DD /* Receipts.xcdatamodeld in Sources */,
+				127E66481BAB2E8400B4C3DD /* RPPMainViewController.m in Sources */,
+				127E66451BAB2E8400B4C3DD /* RPPAppDelegate.m in Sources */,
 				127E66421BAB2E8400B4C3DD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,13 +520,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		127E664C1BAB2E8400B4C3DD /* Receipts__.xcdatamodeld */ = {
+		127E664C1BAB2E8400B4C3DD /* Receipts.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				127E664D1BAB2E8400B4C3DD /* Receipts__.xcdatamodel */,
+				127E664D1BAB2E8400B4C3DD /* Receipts.xcdatamodel */,
 			);
-			currentVersion = 127E664D1BAB2E8400B4C3DD /* Receipts__.xcdatamodel */;
-			path = Receipts__.xcdatamodeld;
+			currentVersion = 127E664D1BAB2E8400B4C3DD /* Receipts.xcdatamodel */;
+			path = Receipts.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

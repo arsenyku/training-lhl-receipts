@@ -6,13 +6,13 @@
 //  Copyright © 2015 asu. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "RPPAppDelegate.h"
 
-@interface AppDelegate ()
+@interface RPPAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation RPPAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

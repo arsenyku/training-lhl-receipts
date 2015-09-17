@@ -6,13 +6,13 @@
 //  Copyright © 2015 asu. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "RPPMainViewController.h"
 
-@interface ViewController ()
+@interface RPPMainViewController ()
 
 @end
 
-@implementation ViewController
+@implementation RPPMainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
