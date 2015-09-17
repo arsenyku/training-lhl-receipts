@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
   
-    NSLog(@"hello there");
+    NSLog(@"foo bar");
 }
 
 - (void)didReceiveMemoryWarning {
