@@ -20,6 +20,7 @@
 		127E66531BAB2E8400B4C3DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 127E66511BAB2E8400B4C3DD /* LaunchScreen.storyboard */; };
 		127E665E1BAB2E8400B4C3DD /* Receipts__Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 127E665D1BAB2E8400B4C3DD /* Receipts__Tests.m */; };
 		127E66691BAB2E8400B4C3DD /* Receipts__UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 127E66681BAB2E8400B4C3DD /* Receipts__UITests.m */; };
+		12E8DBD01BAB57FF0036908D /* RPPAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12E8DBCF1BAB57FF0036908D /* RPPAddViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		127E66641BAB2E8400B4C3DD /* Receipts++UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Receipts++UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		127E66681BAB2E8400B4C3DD /* Receipts__UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Receipts__UITests.m; sourceTree = "<group>"; };
 		127E666A1BAB2E8400B4C3DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12E8DBCE1BAB57FF0036908D /* RPPAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPPAddViewController.h; sourceTree = "<group>"; };
+		12E8DBCF1BAB57FF0036908D /* RPPAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPPAddViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +137,8 @@
 			children = (
 				127E66431BAB2E8400B4C3DD /* RPPAppDelegate.h */,
 				127E66441BAB2E8400B4C3DD /* RPPAppDelegate.m */,
+				12E8DBCE1BAB57FF0036908D /* RPPAddViewController.h */,
+				12E8DBCF1BAB57FF0036908D /* RPPAddViewController.m */,
 				127E66461BAB2E8400B4C3DD /* RPPMainViewController.h */,
 				127E66471BAB2E8400B4C3DD /* RPPMainViewController.m */,
 				126F6BB21BAB512F00F78096 /* Model */,
@@ -304,6 +309,7 @@
 			files = (
 				127E664E1BAB2E8400B4C3DD /* Receipts.xcdatamodeld in Sources */,
 				127E66481BAB2E8400B4C3DD /* RPPMainViewController.m in Sources */,
+				12E8DBD01BAB57FF0036908D /* RPPAddViewController.m in Sources */,
 				127E66451BAB2E8400B4C3DD /* RPPAppDelegate.m in Sources */,
 				126F6BAE1BAB50FE00F78096 /* RPPTag+CoreDataProperties.m in Sources */,
 				127E66421BAB2E8400B4C3DD /* main.m in Sources */,

@@ -20,9 +20,10 @@
     NSLog(@"test");
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (IBAction)addReceipt:(UIButton *)sender {
+    UIViewController *addViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"addReceipt"];
+    [self presentViewController:addViewController animated:YES completion:nil];
 }
 
 @end
