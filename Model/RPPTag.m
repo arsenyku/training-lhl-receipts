@@ -7,6 +7,7 @@
 //
 
 #import "RPPTag.h"
+#import "RPPReceipt.h"
 
 @implementation RPPTag
 

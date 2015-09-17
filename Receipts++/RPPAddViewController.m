@@ -6,15 +6,23 @@
 //  Copyright © 2015 asu. All rights reserved.
 //
 
+#import "RPPConstants.h"
 #import "RPPAddViewController.h"
+#import "RPPAppDelegate.h"
+#import "RPPReceipt.h"
+#import "RPPTag.h"
+#import "NSNumber+NumberFromString.h"
 
-@interface RPPAddViewController ()
+@interface RPPAddViewController () <NSFetchedResultsControllerDelegate>
+
 @property (weak, nonatomic) IBOutlet UITextField *receiptNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *receiptAmountTextField;
 @property (weak, nonatomic) IBOutlet UIDatePicker *receiptDatePicker;
 @property (weak, nonatomic) IBOutlet UITextField *addTagTextField;
 @property (weak, nonatomic) IBOutlet UITextView *tagsListTextView;
 
+@property (strong, nonatomic) NSManagedObjectContext *context;
+@property (nonatomic) NSFetchedResultsController *fetchedResultsController;
 
 @end
 
@@ -24,7 +32,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.tagsListTextView.layer.borderColor = [[UIColor blackColor] CGColor];
+    self.tagsListTextView.layer.borderColor = [[[UIColor blackColor] colorWithAlphaComponent:0.2f] CGColor];
+    self.tagsListTextView.layer.borderWidth = 0.5f;
     
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
@@ -32,19 +41,82 @@
                                    action:@selector(dismissKeyboard)];
     
     [self.view addGestureRecognizer:tap];
+    
+    RPPAppDelegate* appDelegate = [[UIApplication sharedApplication] delegate];
+    self.context = [appDelegate managedObjectContext];
 }
 
 
 - (IBAction)doneAction:(UIButton *)sender {
+    [self createNewReceipt];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
--(void)dismissKeyboard {
+- (void)dismissKeyboard {
     [self.receiptNameTextField resignFirstResponder];
     [self.receiptAmountTextField resignFirstResponder];
     [self.addTagTextField resignFirstResponder];
     
 }
+
+- (void)createNewReceipt {
+    RPPReceipt *receipt = [NSEntityDescription
+                            insertNewObjectForEntityForName:RECEIPT_ENTITY_NAME
+                            inManagedObjectContext:self.context];
+    
+    receipt.saleDescription = self.receiptNameTextField.text;
+    receipt.amount = [NSNumber numberFromString:self.receiptAmountTextField.text];
+    receipt.timeOfSale = self.receiptDatePicker.date;
+    
+    NSError *saveError = nil;
+    
+    if (![self.context save:&saveError]) {
+        NSLog(@"Save failed! %@", saveError);
+    }
+}
+
+#pragma mark - Fetched Results Controller
+- (NSFetchedResultsController *)fetchedResultsController{
+    if (_fetchedResultsController != nil) {
+        return _fetchedResultsController;
+    }
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    // Edit the entity name as appropriate.
+    NSEntityDescription *entity = [NSEntityDescription entityForName:RECEIPT_ENTITY_NAME
+                                              inManagedObjectContext:self.context];
+    [fetchRequest setEntity:entity];
+    
+    // Set the batch size to a suitable number.
+    [fetchRequest setFetchBatchSize:20];
+    
+    // Edit the sort key as appropriate.
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:RECEIPT_ENTITY_NAME ascending:NO];
+    
+    [fetchRequest setSortDescriptors:@[sortDescriptor]];
+    
+    // Edit the section name key path and cache name if appropriate.
+    // nil for section name key path means "no sections".
+    NSFetchedResultsController *fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
+                                                                                               managedObjectContext:self.context
+                                                                                                 sectionNameKeyPath:nil
+                                                                                                          cacheName:@"Master"];
+    fetchedResultsController.delegate = self;
+    self.fetchedResultsController = fetchedResultsController;
+    
+    NSError *error = nil;
+    if (![self.fetchedResultsController performFetch:&error]) {
+        // Replace this implementation with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+    
+    return _fetchedResultsController;
+}
+
+
+
 
 @end

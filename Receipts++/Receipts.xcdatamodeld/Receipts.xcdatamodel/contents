@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8195" systemVersion="14F27" minimumToolsVersion="Automatic">
-    <entity name="RPPReceipt" representedClassName="RPPReceipt" syncable="YES">
+    <entity name="Receipt" representedClassName="RPPReceipt" syncable="YES">
         <attribute name="amount" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="saleDescription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="timeOfSale" optional="YES" attributeType="Date" syncable="YES"/>
-        <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RPPTag" inverseName="receipt" inverseEntity="RPPTag" syncable="YES"/>
+        <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tag" inverseName="receipt" inverseEntity="Tag" syncable="YES"/>
     </entity>
-    <entity name="RPPTag" representedClassName="RPPTag" syncable="YES">
+    <entity name="Tag" representedClassName="RPPTag" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="receipt" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RPPReceipt" inverseName="tags" inverseEntity="RPPReceipt" syncable="YES"/>
+        <relationship name="receipt" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Receipt" inverseName="tags" inverseEntity="Receipt" syncable="YES"/>
     </entity>
     <elements>
-        <element name="RPPReceipt" positionX="-290" positionY="-54" width="128" height="105"/>
-        <element name="RPPTag" positionX="-54" positionY="-9" width="128" height="75"/>
+        <element name="Receipt" positionX="-290" positionY="-54" width="128" height="105"/>
+        <element name="Tag" positionX="-54" positionY="-9" width="128" height="75"/>
     </elements>
 </model>

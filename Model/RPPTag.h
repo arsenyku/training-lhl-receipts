@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class RPPReceipt;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RPPTag : NSManagedObject
