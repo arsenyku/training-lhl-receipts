@@ -55,27 +55,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iKQ-4D-Zbs">
-                                <rect key="frame" x="175" y="105" width="250" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                            </textField>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="slS-px-FBa">
-                                <rect key="frame" x="175" y="170" width="250" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="yLp-JO-dE4"/>
-                                </constraints>
-                                <date key="date" timeIntervalSinceReferenceDate="464214117.20609498">
-                                    <!--2015-09-17 20:21:57 +0000-->
-                                </date>
-                            </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5Z-U4-F2U">
-                                <rect key="frame" x="282" y="421" width="37" height="30"/>
-                                <state key="normal" title="Done"/>
-                                <connections>
-                                    <action selector="doneAction:" destination="9bk-Xt-kDC" eventType="touchUpInside" id="AkE-dS-9LV"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="goI-Fu-f2w">
                                 <rect key="frame" x="175" y="40" width="250" height="30"/>
                                 <constraints>
@@ -84,15 +63,55 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iKQ-4D-Zbs">
+                                <rect key="frame" x="175" y="90" width="250" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="slS-px-FBa">
+                                <rect key="frame" x="175" y="140" width="250" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="yLp-JO-dE4"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="464214117.20609498">
+                                    <!--2015-09-17 20:21:57 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5Z-U4-F2U">
+                                <rect key="frame" x="282" y="410" width="37" height="30"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneAction:" destination="9bk-Xt-kDC" eventType="touchUpInside" id="AkE-dS-9LV"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="Tag1 Tag2" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pXE-nb-L2u">
+                                <rect key="frame" x="175" y="305" width="250" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="uC0-FI-9TP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add new tag" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kMB-Da-dAe">
+                                <rect key="frame" x="175" y="255" width="250" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="iKQ-4D-Zbs" firstAttribute="width" secondItem="goI-Fu-f2w" secondAttribute="width" id="1Ix-HI-f4K"/>
-                            <constraint firstItem="slS-px-FBa" firstAttribute="top" secondItem="iKQ-4D-Zbs" secondAttribute="bottom" constant="35" id="5yx-tx-P7H"/>
+                            <constraint firstItem="pXE-nb-L2u" firstAttribute="top" secondItem="kMB-Da-dAe" secondAttribute="bottom" constant="20" id="363-cO-V4C" userLabel="Spacer addTag to tagList"/>
+                            <constraint firstItem="R5Z-U4-F2U" firstAttribute="top" secondItem="pXE-nb-L2u" secondAttribute="bottom" constant="35" id="4uH-aI-MEb" userLabel="Spacer tagList to Done"/>
+                            <constraint firstItem="slS-px-FBa" firstAttribute="top" secondItem="iKQ-4D-Zbs" secondAttribute="bottom" constant="20" id="5yx-tx-P7H" userLabel="Spacer amount to date"/>
+                            <constraint firstItem="kMB-Da-dAe" firstAttribute="centerX" secondItem="slS-px-FBa" secondAttribute="centerX" id="CYG-QQ-3mp"/>
+                            <constraint firstItem="kMB-Da-dAe" firstAttribute="width" secondItem="slS-px-FBa" secondAttribute="width" id="FLZ-l0-c7L"/>
                             <constraint firstItem="R5Z-U4-F2U" firstAttribute="centerX" secondItem="slS-px-FBa" secondAttribute="centerX" id="FU2-gl-huj"/>
-                            <constraint firstItem="R5Z-U4-F2U" firstAttribute="top" secondItem="slS-px-FBa" secondAttribute="bottom" constant="35" id="RTr-b0-au6"/>
-                            <constraint firstItem="iKQ-4D-Zbs" firstAttribute="top" secondItem="goI-Fu-f2w" secondAttribute="bottom" constant="35" id="gOk-Lu-f4B"/>
+                            <constraint firstItem="pXE-nb-L2u" firstAttribute="width" secondItem="kMB-Da-dAe" secondAttribute="width" id="cBC-np-2rO"/>
+                            <constraint firstItem="pXE-nb-L2u" firstAttribute="centerX" secondItem="kMB-Da-dAe" secondAttribute="centerX" id="g9K-iI-mJM"/>
+                            <constraint firstItem="iKQ-4D-Zbs" firstAttribute="top" secondItem="goI-Fu-f2w" secondAttribute="bottom" constant="20" id="gOk-Lu-f4B" userLabel="Spacer name to amount"/>
                             <constraint firstItem="slS-px-FBa" firstAttribute="centerX" secondItem="iKQ-4D-Zbs" secondAttribute="centerX" id="hBf-qg-7GC"/>
+                            <constraint firstItem="kMB-Da-dAe" firstAttribute="top" secondItem="slS-px-FBa" secondAttribute="bottom" constant="35" id="iaB-Tz-rck" userLabel="Spacer date to addTag"/>
                             <constraint firstItem="goI-Fu-f2w" firstAttribute="centerX" secondItem="clF-s4-YwN" secondAttribute="centerX" id="l7N-V3-3gx"/>
                             <constraint firstItem="goI-Fu-f2w" firstAttribute="top" secondItem="clF-s4-YwN" secondAttribute="top" constant="40" id="pV8-R7-gnE"/>
                             <constraint firstItem="slS-px-FBa" firstAttribute="width" secondItem="iKQ-4D-Zbs" secondAttribute="width" id="uNF-3m-avR"/>
@@ -100,9 +119,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addTagTextField" destination="kMB-Da-dAe" id="ClG-tq-tqZ"/>
                         <outlet property="receiptAmountTextField" destination="iKQ-4D-Zbs" id="SZX-5S-3VO"/>
                         <outlet property="receiptDatePicker" destination="slS-px-FBa" id="KS4-zU-NCH"/>
                         <outlet property="receiptNameTextField" destination="goI-Fu-f2w" id="Wsk-JP-NRg"/>
+                        <outlet property="tagsListTextView" destination="pXE-nb-L2u" id="tWB-3s-8GO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ob4-pO-Yek" userLabel="First Responder" sceneMemberID="firstResponder"/>

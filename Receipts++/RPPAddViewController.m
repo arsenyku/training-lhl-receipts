@@ -12,6 +12,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *receiptNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *receiptAmountTextField;
 @property (weak, nonatomic) IBOutlet UIDatePicker *receiptDatePicker;
+@property (weak, nonatomic) IBOutlet UITextField *addTagTextField;
+@property (weak, nonatomic) IBOutlet UITextView *tagsListTextView;
+
 
 @end
 
@@ -20,6 +23,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.tagsListTextView.layer.borderColor = [[UIColor blackColor] CGColor];
+    
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
@@ -37,6 +43,8 @@
 -(void)dismissKeyboard {
     [self.receiptNameTextField resignFirstResponder];
     [self.receiptAmountTextField resignFirstResponder];
+    [self.addTagTextField resignFirstResponder];
+    
 }
 
 @end
