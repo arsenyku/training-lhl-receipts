@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		126F6BAE1BAB50FE00F78096 /* RPPTag+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 126F6BA71BAB50FE00F78096 /* RPPTag+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		126F6BAF1BAB50FE00F78096 /* RPPTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 126F6BA91BAB50FE00F78096 /* RPPTag.m */; settings = {ASSET_TAGS = (); }; };
+		126F6BB01BAB50FE00F78096 /* RPPReceipt+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 126F6BAB1BAB50FE00F78096 /* RPPReceipt+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		126F6BB11BAB50FE00F78096 /* RPPReceipt.m in Sources */ = {isa = PBXBuildFile; fileRef = 126F6BAD1BAB50FE00F78096 /* RPPReceipt.m */; settings = {ASSET_TAGS = (); }; };
 		127E66421BAB2E8400B4C3DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 127E66411BAB2E8400B4C3DD /* main.m */; };
 		127E66451BAB2E8400B4C3DD /* RPPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 127E66441BAB2E8400B4C3DD /* RPPAppDelegate.m */; };
 		127E66481BAB2E8400B4C3DD /* RPPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 127E66471BAB2E8400B4C3DD /* RPPMainViewController.m */; };
@@ -36,6 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		126F6BA61BAB50FE00F78096 /* RPPTag+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RPPTag+CoreDataProperties.h"; path = "Model/RPPTag+CoreDataProperties.h"; sourceTree = "<group>"; };
+		126F6BA71BAB50FE00F78096 /* RPPTag+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "RPPTag+CoreDataProperties.m"; path = "Model/RPPTag+CoreDataProperties.m"; sourceTree = "<group>"; };
+		126F6BA81BAB50FE00F78096 /* RPPTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RPPTag.h; path = Model/RPPTag.h; sourceTree = "<group>"; };
+		126F6BA91BAB50FE00F78096 /* RPPTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RPPTag.m; path = Model/RPPTag.m; sourceTree = "<group>"; };
+		126F6BAA1BAB50FE00F78096 /* RPPReceipt+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RPPReceipt+CoreDataProperties.h"; path = "Model/RPPReceipt+CoreDataProperties.h"; sourceTree = "<group>"; };
+		126F6BAB1BAB50FE00F78096 /* RPPReceipt+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "RPPReceipt+CoreDataProperties.m"; path = "Model/RPPReceipt+CoreDataProperties.m"; sourceTree = "<group>"; };
+		126F6BAC1BAB50FE00F78096 /* RPPReceipt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RPPReceipt.h; path = Model/RPPReceipt.h; sourceTree = "<group>"; };
+		126F6BAD1BAB50FE00F78096 /* RPPReceipt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RPPReceipt.m; path = Model/RPPReceipt.m; sourceTree = "<group>"; };
 		127E663D1BAB2E8400B4C3DD /* Receipts++.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Receipts++.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		127E66411BAB2E8400B4C3DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		127E66431BAB2E8400B4C3DD /* RPPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RPPAppDelegate.h; sourceTree = "<group>"; };
@@ -80,6 +92,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		126F6BB21BAB512F00F78096 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				127E664C1BAB2E8400B4C3DD /* Receipts.xcdatamodeld */,
+				126F6BA61BAB50FE00F78096 /* RPPTag+CoreDataProperties.h */,
+				126F6BA71BAB50FE00F78096 /* RPPTag+CoreDataProperties.m */,
+				126F6BA81BAB50FE00F78096 /* RPPTag.h */,
+				126F6BA91BAB50FE00F78096 /* RPPTag.m */,
+				126F6BAA1BAB50FE00F78096 /* RPPReceipt+CoreDataProperties.h */,
+				126F6BAB1BAB50FE00F78096 /* RPPReceipt+CoreDataProperties.m */,
+				126F6BAC1BAB50FE00F78096 /* RPPReceipt.h */,
+				126F6BAD1BAB50FE00F78096 /* RPPReceipt.m */,
+			);
+			name = Model;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		127E66341BAB2E8400B4C3DD = {
 			isa = PBXGroup;
 			children = (
@@ -107,11 +136,11 @@
 				127E66441BAB2E8400B4C3DD /* RPPAppDelegate.m */,
 				127E66461BAB2E8400B4C3DD /* RPPMainViewController.h */,
 				127E66471BAB2E8400B4C3DD /* RPPMainViewController.m */,
+				126F6BB21BAB512F00F78096 /* Model */,
 				127E66491BAB2E8400B4C3DD /* Main.storyboard */,
 				127E664F1BAB2E8400B4C3DD /* Assets.xcassets */,
 				127E66511BAB2E8400B4C3DD /* LaunchScreen.storyboard */,
 				127E66541BAB2E8400B4C3DD /* Info.plist */,
-				127E664C1BAB2E8400B4C3DD /* Receipts.xcdatamodeld */,
 				127E66401BAB2E8400B4C3DD /* Supporting Files */,
 			);
 			path = "Receipts++";
@@ -276,7 +305,11 @@
 				127E664E1BAB2E8400B4C3DD /* Receipts.xcdatamodeld in Sources */,
 				127E66481BAB2E8400B4C3DD /* RPPMainViewController.m in Sources */,
 				127E66451BAB2E8400B4C3DD /* RPPAppDelegate.m in Sources */,
+				126F6BAE1BAB50FE00F78096 /* RPPTag+CoreDataProperties.m in Sources */,
 				127E66421BAB2E8400B4C3DD /* main.m in Sources */,
+				126F6BB11BAB50FE00F78096 /* RPPReceipt.m in Sources */,
+				126F6BAF1BAB50FE00F78096 /* RPPTag.m in Sources */,
+				126F6BB01BAB50FE00F78096 /* RPPReceipt+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +533,7 @@
 				127E666F1BAB2E8400B4C3DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		127E66701BAB2E8400B4C3DD /* Build configuration list for PBXNativeTarget "Receipts++Tests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +542,7 @@
 				127E66721BAB2E8400B4C3DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		127E66731BAB2E8400B4C3DD /* Build configuration list for PBXNativeTarget "Receipts++UITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +551,7 @@
 				127E66751BAB2E8400B4C3DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
@@ -526,7 +562,8 @@
 				127E664D1BAB2E8400B4C3DD /* Receipts.xcdatamodel */,
 			);
 			currentVersion = 127E664D1BAB2E8400B4C3DD /* Receipts.xcdatamodel */;
-			path = Receipts.xcdatamodeld;
+			name = Receipts.xcdatamodeld;
+			path = "Receipts++/Receipts.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
