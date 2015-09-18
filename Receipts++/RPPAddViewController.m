@@ -100,20 +100,6 @@
     
     NSArray *tagStrings = [self.tagsListTextView.text componentsSeparatedByString:@"\n"];
     
-    NSFetchRequest *tagsQuery = [[NSFetchRequest alloc] initWithEntityName:TAG_ENTITY_NAME];
-
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:NAME_ATTRIBUTE_NAME
-                                                                   ascending:NO];
-    
-    [tagsQuery setSortDescriptors:@[sortDescriptor]];
-
-    
-    self.fetchedResultsController =
-    [[NSFetchedResultsController alloc] initWithFetchRequest:tagsQuery
-                                        managedObjectContext:self.context
-                                          sectionNameKeyPath:nil
-                                                   cacheName:@"Master"];
-    
     NSError *error = nil;
     if (! [self.fetchedResultsController performFetch:&error] )
         NSLog(@"Error during tags query: %@", error);
@@ -121,13 +107,13 @@
     NSArray *fetchedTags = self.fetchedResultsController.fetchedObjects;
     
     for (NSString *tagString in tagStrings) {
-        RPPTag* tag = [[fetchedTags filteredArrayUsingPredicate:
-                        [NSPredicate predicateWithFormat:@"name = %@",tagString]] firstObject];
-		
         // Ignore if the tag is empty
         if ([tagString length] < 1)
             continue;
         
+        RPPTag* tag = [[fetchedTags filteredArrayUsingPredicate:
+                        [NSPredicate predicateWithFormat:@"name = %@",tagString]] firstObject];
+		
         if (! tag)
             tag = [self createTag:tagString];
         
@@ -175,29 +161,23 @@
         return _fetchedResultsController;
     }
     
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    // Edit the entity name as appropriate.
-    NSEntityDescription *entity = [NSEntityDescription entityForName:RECEIPT_ENTITY_NAME
-                                              inManagedObjectContext:self.context];
-    [fetchRequest setEntity:entity];
+    NSFetchRequest *tagsQuery = [[NSFetchRequest alloc] initWithEntityName:TAG_ENTITY_NAME];
     
-    // Set the batch size to a suitable number.
-    [fetchRequest setFetchBatchSize:20];
-    
-    // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:RECEIPT_ENTITY_NAME
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:NAME_ATTRIBUTE_NAME
                                                                    ascending:NO];
     
-    [fetchRequest setSortDescriptors:@[sortDescriptor]];
+    [tagsQuery setSortDescriptors:@[sortDescriptor]];
     
-    // Edit the section name key path and cache name if appropriate.
-    // nil for section name key path means "no sections".
-    NSFetchedResultsController *fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
-                                                                                               managedObjectContext:self.context
-                                                                                                 sectionNameKeyPath:nil
-                                                                                                          cacheName:@"Master"];
-    fetchedResultsController.delegate = self;
-    self.fetchedResultsController = fetchedResultsController;
+    [tagsQuery setFetchBatchSize:20];
+    
+    self.fetchedResultsController =
+    [[NSFetchedResultsController alloc] initWithFetchRequest:tagsQuery
+                                        managedObjectContext:self.context
+                                          sectionNameKeyPath:nil
+                                                   cacheName:@"Master"];
+
+    
+    self.fetchedResultsController.delegate = self;
     
     NSError *error = nil;
     if (![self.fetchedResultsController performFetch:&error]) {
