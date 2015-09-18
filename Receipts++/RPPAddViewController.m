@@ -67,9 +67,12 @@
 
     NSNumber *amount = [NSNumber numberFromString:self.receiptAmountTextField.text];
     
+    if (amount == nil)
+        return NO;
+
     NSSet *tags = [self retrieveTags];
     
-    if (amount == nil)
+    if ([tags count] < 1)
         return NO;
     
     RPPReceipt *receipt = [NSEntityDescription
