@@ -16,16 +16,16 @@ NS_ASSUME_NONNULL_BEGIN
 @interface RPPTag (CoreDataProperties)
 
 @property (nullable, nonatomic, retain) NSString *name;
-@property (nullable, nonatomic, retain) NSSet<RPPReceipt *> *receipt;
+@property (nullable, nonatomic, retain) NSSet<RPPReceipt *> *receipts;
 
 @end
 
 @interface RPPTag (CoreDataGeneratedAccessors)
 
-- (void)addReceiptObject:(RPPReceipt *)value;
-- (void)removeReceiptObject:(RPPReceipt *)value;
-- (void)addReceipt:(NSSet<RPPReceipt *> *)values;
-- (void)removeReceipt:(NSSet<RPPReceipt *> *)values;
+- (void)addReceiptsObject:(RPPReceipt *)value;
+- (void)removeReceiptsObject:(RPPReceipt *)value;
+- (void)addReceipts:(NSSet<RPPReceipt *> *)values;
+- (void)removeReceipts:(NSSet<RPPReceipt *> *)values;
 
 @end
 

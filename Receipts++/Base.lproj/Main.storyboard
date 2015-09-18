@@ -50,8 +50,8 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="EbF-pA-JC8"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Vq-d1-s9d">
-                                <rect key="frame" x="255" y="533" width="91" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Vq-d1-s9d">
+                                <rect key="frame" x="258" y="533" width="84" height="30"/>
                                 <state key="normal" title="Add Receipt"/>
                                 <connections>
                                     <action selector="addReceipt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FPt-qg-fAd"/>

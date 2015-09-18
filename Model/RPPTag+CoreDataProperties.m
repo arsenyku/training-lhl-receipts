@@ -14,6 +14,6 @@
 @implementation RPPTag (CoreDataProperties)
 
 @dynamic name;
-@dynamic receipt;
+@dynamic receipts;
 
 @end

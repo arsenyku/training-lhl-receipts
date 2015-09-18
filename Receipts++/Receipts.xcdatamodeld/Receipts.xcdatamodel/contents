@@ -4,11 +4,11 @@
         <attribute name="amount" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="saleDescription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="timeOfSale" optional="YES" attributeType="Date" syncable="YES"/>
-        <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tag" inverseName="receipt" inverseEntity="Tag" syncable="YES"/>
+        <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tag" inverseName="receipts" inverseEntity="Tag" syncable="YES"/>
     </entity>
     <entity name="Tag" representedClassName="RPPTag" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="receipt" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Receipt" inverseName="tags" inverseEntity="Receipt" syncable="YES"/>
+        <relationship name="receipts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Receipt" inverseName="tags" inverseEntity="Receipt" syncable="YES"/>
     </entity>
     <elements>
         <element name="Receipt" positionX="-290" positionY="-54" width="128" height="105"/>

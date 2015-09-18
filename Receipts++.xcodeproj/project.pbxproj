@@ -18,12 +18,12 @@
 		127E66691BAB2E8400B4C3DD /* Receipts__UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 127E66681BAB2E8400B4C3DD /* Receipts__UITests.m */; };
 		12E8DBD01BAB57FF0036908D /* RPPAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12E8DBCF1BAB57FF0036908D /* RPPAddViewController.m */; settings = {ASSET_TAGS = (); }; };
 		12E8DBD41BAB6BEB0036908D /* NSNumber+NumberFromString.m in Sources */ = {isa = PBXBuildFile; fileRef = 12E8DBD21BAB6BEB0036908D /* NSNumber+NumberFromString.m */; settings = {ASSET_TAGS = (); }; };
-		12E8DBE81BAB76080036908D /* RPPReceipt+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12E8DBE11BAB76080036908D /* RPPReceipt+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
-		12E8DBE91BAB76080036908D /* RPPReceipt.m in Sources */ = {isa = PBXBuildFile; fileRef = 12E8DBE31BAB76080036908D /* RPPReceipt.m */; settings = {ASSET_TAGS = (); }; };
-		12E8DBEA1BAB76080036908D /* RPPTag+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12E8DBE51BAB76080036908D /* RPPTag+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
-		12E8DBEB1BAB76080036908D /* RPPTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 12E8DBE71BAB76080036908D /* RPPTag.m */; settings = {ASSET_TAGS = (); }; };
 		12E8DBEE1BAB78EF0036908D /* NSNumber+CurrencyFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 12E8DBED1BAB78EF0036908D /* NSNumber+CurrencyFormat.m */; settings = {ASSET_TAGS = (); }; };
 		12E8DBF11BAB7A680036908D /* NSDate+FormattedDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 12E8DBEF1BAB7A680036908D /* NSDate+FormattedDate.m */; settings = {ASSET_TAGS = (); }; };
+		12E8DBFA1BABD3950036908D /* RPPReceipt+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12E8DBF31BABD3950036908D /* RPPReceipt+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		12E8DBFB1BABD3950036908D /* RPPReceipt.m in Sources */ = {isa = PBXBuildFile; fileRef = 12E8DBF51BABD3950036908D /* RPPReceipt.m */; settings = {ASSET_TAGS = (); }; };
+		12E8DBFC1BABD3950036908D /* RPPTag+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 12E8DBF71BABD3950036908D /* RPPTag+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		12E8DBFD1BABD3950036908D /* RPPTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 12E8DBF91BABD3950036908D /* RPPTag.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,18 +66,18 @@
 		12E8DBD11BAB68FD0036908D /* RPPConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPPConstants.h; sourceTree = "<group>"; };
 		12E8DBD21BAB6BEB0036908D /* NSNumber+NumberFromString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+NumberFromString.m"; sourceTree = "<group>"; };
 		12E8DBD31BAB6BEB0036908D /* NSNumber+NumberFromString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+NumberFromString.h"; sourceTree = "<group>"; };
-		12E8DBE01BAB76080036908D /* RPPReceipt+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RPPReceipt+CoreDataProperties.h"; path = "Model/RPPReceipt+CoreDataProperties.h"; sourceTree = "<group>"; };
-		12E8DBE11BAB76080036908D /* RPPReceipt+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "RPPReceipt+CoreDataProperties.m"; path = "Model/RPPReceipt+CoreDataProperties.m"; sourceTree = "<group>"; };
-		12E8DBE21BAB76080036908D /* RPPReceipt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RPPReceipt.h; path = Model/RPPReceipt.h; sourceTree = "<group>"; };
-		12E8DBE31BAB76080036908D /* RPPReceipt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RPPReceipt.m; path = Model/RPPReceipt.m; sourceTree = "<group>"; };
-		12E8DBE41BAB76080036908D /* RPPTag+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RPPTag+CoreDataProperties.h"; path = "Model/RPPTag+CoreDataProperties.h"; sourceTree = "<group>"; };
-		12E8DBE51BAB76080036908D /* RPPTag+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "RPPTag+CoreDataProperties.m"; path = "Model/RPPTag+CoreDataProperties.m"; sourceTree = "<group>"; };
-		12E8DBE61BAB76080036908D /* RPPTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RPPTag.h; path = Model/RPPTag.h; sourceTree = "<group>"; };
-		12E8DBE71BAB76080036908D /* RPPTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RPPTag.m; path = Model/RPPTag.m; sourceTree = "<group>"; };
 		12E8DBEC1BAB78EF0036908D /* NSNumber+CurrencyFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+CurrencyFormat.h"; sourceTree = "<group>"; };
 		12E8DBED1BAB78EF0036908D /* NSNumber+CurrencyFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+CurrencyFormat.m"; sourceTree = "<group>"; };
 		12E8DBEF1BAB7A680036908D /* NSDate+FormattedDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+FormattedDate.m"; sourceTree = "<group>"; };
 		12E8DBF01BAB7A680036908D /* NSDate+FormattedDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+FormattedDate.h"; sourceTree = "<group>"; };
+		12E8DBF21BABD3950036908D /* RPPReceipt+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RPPReceipt+CoreDataProperties.h"; path = "Model/RPPReceipt+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12E8DBF31BABD3950036908D /* RPPReceipt+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "RPPReceipt+CoreDataProperties.m"; path = "Model/RPPReceipt+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12E8DBF41BABD3950036908D /* RPPReceipt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RPPReceipt.h; path = Model/RPPReceipt.h; sourceTree = "<group>"; };
+		12E8DBF51BABD3950036908D /* RPPReceipt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RPPReceipt.m; path = Model/RPPReceipt.m; sourceTree = "<group>"; };
+		12E8DBF61BABD3950036908D /* RPPTag+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "RPPTag+CoreDataProperties.h"; path = "Model/RPPTag+CoreDataProperties.h"; sourceTree = "<group>"; };
+		12E8DBF71BABD3950036908D /* RPPTag+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "RPPTag+CoreDataProperties.m"; path = "Model/RPPTag+CoreDataProperties.m"; sourceTree = "<group>"; };
+		12E8DBF81BABD3950036908D /* RPPTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RPPTag.h; path = Model/RPPTag.h; sourceTree = "<group>"; };
+		12E8DBF91BABD3950036908D /* RPPTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RPPTag.m; path = Model/RPPTag.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,14 +108,14 @@
 		126F6BB21BAB512F00F78096 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				12E8DBE01BAB76080036908D /* RPPReceipt+CoreDataProperties.h */,
-				12E8DBE11BAB76080036908D /* RPPReceipt+CoreDataProperties.m */,
-				12E8DBE21BAB76080036908D /* RPPReceipt.h */,
-				12E8DBE31BAB76080036908D /* RPPReceipt.m */,
-				12E8DBE41BAB76080036908D /* RPPTag+CoreDataProperties.h */,
-				12E8DBE51BAB76080036908D /* RPPTag+CoreDataProperties.m */,
-				12E8DBE61BAB76080036908D /* RPPTag.h */,
-				12E8DBE71BAB76080036908D /* RPPTag.m */,
+				12E8DBF21BABD3950036908D /* RPPReceipt+CoreDataProperties.h */,
+				12E8DBF31BABD3950036908D /* RPPReceipt+CoreDataProperties.m */,
+				12E8DBF41BABD3950036908D /* RPPReceipt.h */,
+				12E8DBF51BABD3950036908D /* RPPReceipt.m */,
+				12E8DBF61BABD3950036908D /* RPPTag+CoreDataProperties.h */,
+				12E8DBF71BABD3950036908D /* RPPTag+CoreDataProperties.m */,
+				12E8DBF81BABD3950036908D /* RPPTag.h */,
+				12E8DBF91BABD3950036908D /* RPPTag.m */,
 				127E664C1BAB2E8400B4C3DD /* Receipts.xcdatamodeld */,
 			);
 			name = Model;
@@ -325,17 +325,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				127E664E1BAB2E8400B4C3DD /* Receipts.xcdatamodeld in Sources */,
+				12E8DBFA1BABD3950036908D /* RPPReceipt+CoreDataProperties.m in Sources */,
 				127E66481BAB2E8400B4C3DD /* RPPMainViewController.m in Sources */,
 				12E8DBEE1BAB78EF0036908D /* NSNumber+CurrencyFormat.m in Sources */,
 				12E8DBF11BAB7A680036908D /* NSDate+FormattedDate.m in Sources */,
+				12E8DBFD1BABD3950036908D /* RPPTag.m in Sources */,
+				12E8DBFB1BABD3950036908D /* RPPReceipt.m in Sources */,
 				12E8DBD01BAB57FF0036908D /* RPPAddViewController.m in Sources */,
 				127E66451BAB2E8400B4C3DD /* RPPAppDelegate.m in Sources */,
 				127E66421BAB2E8400B4C3DD /* main.m in Sources */,
-				12E8DBEA1BAB76080036908D /* RPPTag+CoreDataProperties.m in Sources */,
-				12E8DBE91BAB76080036908D /* RPPReceipt.m in Sources */,
-				12E8DBEB1BAB76080036908D /* RPPTag.m in Sources */,
+				12E8DBFC1BABD3950036908D /* RPPTag+CoreDataProperties.m in Sources */,
 				12E8DBD41BAB6BEB0036908D /* NSNumber+NumberFromString.m in Sources */,
-				12E8DBE81BAB76080036908D /* RPPReceipt+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
