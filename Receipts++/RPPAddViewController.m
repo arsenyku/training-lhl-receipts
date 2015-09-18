@@ -67,6 +67,8 @@
 
     NSNumber *amount = [NSNumber numberFromString:self.receiptAmountTextField.text];
     
+    [self retrieveTags];
+    
     if (amount == nil)
         return NO;
     
@@ -87,17 +89,73 @@
     return YES;
 }
 
+
+-(NSArray*)retrieveTags{
+    NSArray *result = [NSArray new];
+    
+    NSArray *tagStrings = [self.tagsListTextView.text componentsSeparatedByString:@"\n"];
+    
+    NSFetchRequest *tagsQuery = [[NSFetchRequest alloc] initWithEntityName:TAG_ENTITY_NAME];
+
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:NAME_ATTRIBUTE_NAME
+                                                                   ascending:NO];
+    
+    [tagsQuery setSortDescriptors:@[sortDescriptor]];
+
+    
+    self.fetchedResultsController =
+    [[NSFetchedResultsController alloc] initWithFetchRequest:tagsQuery
+                                        managedObjectContext:self.context
+                                          sectionNameKeyPath:nil
+                                                   cacheName:@"Master"];
+    
+    NSError *error = nil;
+    if (! [self.fetchedResultsController performFetch:&error] )
+        NSLog(@"Error during tags query: %@", error);
+    
+    NSArray *fetchedTags = self.fetchedResultsController.fetchedObjects;
+    
+    for (NSString *tagString in tagStrings) {
+        RPPTag* tag = [[fetchedTags filteredArrayUsingPredicate:
+                        [NSPredicate predicateWithFormat:@"name = %@",tagString]] firstObject];
+		
+        // Ignore if the tag is empty
+        if ([tagString length] < 1)
+            continue;
+        
+        if (! tag)
+            tag = [self createTag:tagString];
+        
+        
+        result = [result arrayByAddingObject:tag];
+        
+    }
+
+    return result;
+}
+
+
+- (RPPTag*)createTag:(NSString*)tagString {
+    RPPTag *tag = [NSEntityDescription
+                           insertNewObjectForEntityForName:TAG_ENTITY_NAME
+                           inManagedObjectContext:self.context];
+    tag.name = tagString;
+    
+    return tag;
+
+}
+
 #pragma mark - UITextFieldDelegate
 
 // called when 'return' key pressed. return NO to ignore.
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     
     NSString *candidateText = [self.addTagTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    
+    NSString *newline = [self.tagsListTextView.text length] > 0 ? @"\n" : @"";
     if ([candidateText length] > 0){
     
         self.tagsListTextView.text =
-        [NSString stringWithFormat:@"%@\n%@", self.tagsListTextView.text, self.addTagTextField.text];
+        [NSString stringWithFormat:@"%@%@%@", self.tagsListTextView.text, newline, self.addTagTextField.text];
         
         self.addTagTextField.text = @"";
     }

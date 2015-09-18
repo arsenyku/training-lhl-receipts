@@ -8,5 +8,6 @@
 #define RECEIPT_ENTITY_NAME @"Receipt"
 #define TAG_ENTITY_NAME @"Tag"
 #define AMOUNT_ATTRIBUTE_NAME @"amount"
+#define NAME_ATTRIBUTE_NAME @"name"
 
 
