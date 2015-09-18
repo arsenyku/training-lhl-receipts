@@ -9,5 +9,7 @@
 #define TAG_ENTITY_NAME @"Tag"
 #define AMOUNT_ATTRIBUTE_NAME @"amount"
 #define NAME_ATTRIBUTE_NAME @"name"
+#define TAG_RELATIONSHIP_NAME @"tags"
+#define RECEIPT_RELATIONSHIP_NAME @"receipts"
 
 

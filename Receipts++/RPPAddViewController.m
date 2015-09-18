@@ -67,7 +67,7 @@
 
     NSNumber *amount = [NSNumber numberFromString:self.receiptAmountTextField.text];
     
-    [self retrieveTags];
+    NSSet *tags = [self retrieveTags];
     
     if (amount == nil)
         return NO;
@@ -80,6 +80,8 @@
     receipt.amount = amount;
     receipt.timeOfSale = self.receiptDatePicker.date;
     
+    receipt.tags = tags;
+
     NSError *saveError = nil;
     
     if (![self.context save:&saveError]) {
@@ -90,8 +92,8 @@
 }
 
 
--(NSArray*)retrieveTags{
-    NSArray *result = [NSArray new];
+-(NSSet*)retrieveTags{
+    NSMutableSet *result = [[NSMutableSet alloc] init];
     
     NSArray *tagStrings = [self.tagsListTextView.text componentsSeparatedByString:@"\n"];
     
@@ -127,7 +129,7 @@
             tag = [self createTag:tagString];
         
         
-        result = [result arrayByAddingObject:tag];
+        [result addObject:tag];
         
     }
 
