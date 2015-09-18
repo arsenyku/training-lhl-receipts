@@ -116,12 +116,7 @@
 }
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-    id<NSFetchedResultsSectionInfo> sectionInfo = self.fetchedResultsController.sections[ section ] ;
-    NSArray *tags = [sectionInfo objects];
-    
-    RPPTag *tag = [tags firstObject];
-    
-    return tag.name;
+    return [self tagAtSection:section].name;
 }
 
 
