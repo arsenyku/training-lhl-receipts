@@ -110,26 +110,29 @@
                                     <!--2015-09-17 20:21:57 +0000-->
                                 </date>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5Z-U4-F2U">
-                                <rect key="frame" x="282" y="410" width="37" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5Z-U4-F2U">
+                                <rect key="frame" x="282" y="490" width="37" height="30"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
                                     <action selector="doneAction:" destination="9bk-Xt-kDC" eventType="touchUpInside" id="AkE-dS-9LV"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="Tag1 Tag2" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pXE-nb-L2u">
-                                <rect key="frame" x="175" y="305" width="250" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="uC0-FI-9TP"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add new tag" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kMB-Da-dAe">
                                 <rect key="frame" x="175" y="255" width="250" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="9bk-Xt-kDC" id="U5N-EC-gAA"/>
+                                </connections>
                             </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Tag1 Tag2" translatesAutoresizingMaskIntoConstraints="NO" id="pXE-nb-L2u">
+                                <rect key="frame" x="175" y="305" width="250" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="uC0-FI-9TP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -156,7 +159,7 @@
                         <outlet property="receiptAmountTextField" destination="iKQ-4D-Zbs" id="SZX-5S-3VO"/>
                         <outlet property="receiptDatePicker" destination="slS-px-FBa" id="KS4-zU-NCH"/>
                         <outlet property="receiptNameTextField" destination="goI-Fu-f2w" id="Wsk-JP-NRg"/>
-                        <outlet property="tagsListTextView" destination="pXE-nb-L2u" id="tWB-3s-8GO"/>
+                        <outlet property="tagsListTextView" destination="pXE-nb-L2u" id="y6S-3m-hcr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ob4-pO-Yek" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -34,6 +34,8 @@
     
     self.tagsListTextView.layer.borderColor = [[[UIColor blackColor] colorWithAlphaComponent:0.2f] CGColor];
     self.tagsListTextView.layer.borderWidth = 0.5f;
+	self.automaticallyAdjustsScrollViewInsets = NO;
+    self.tagsListTextView.text = @"";
     
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
@@ -84,6 +86,25 @@
     
     return YES;
 }
+
+#pragma mark - UITextFieldDelegate
+
+// called when 'return' key pressed. return NO to ignore.
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    
+    NSString *candidateText = [self.addTagTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    if ([candidateText length] > 0){
+    
+        self.tagsListTextView.text =
+        [NSString stringWithFormat:@"%@\n%@", self.tagsListTextView.text, self.addTagTextField.text];
+        
+        self.addTagTextField.text = @"";
+    }
+    
+    return YES;
+}
+
 
 #pragma mark - Fetched Results Controller
 - (NSFetchedResultsController *)fetchedResultsController{
